@@ -1,0 +1,346 @@
+/* فونت فارسی و استایل پایه */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Vazirmatn, sans-serif;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    background: linear-gradient(135deg, #0c2461 0%, #1e3799 20%, #4a69bd 60%, #6a89cc 100%);
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* هدر صفحه با بخش دانشکده */
+header {
+    background: linear-gradient(90deg, #0c2461 0%, #1e3799 50%, #4a69bd 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.university-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* سایز مشخص برای لوگو */
+.logo-container {
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+/* استایل برای لوگوی واقعی */
+.university-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* استایل برای مکان‌نمای لوگو */
+.logo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0c2461, #1e3799);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo-placeholder i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.logo-placeholder span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.university-info {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.university-name {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.association-name {
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+    color: #e0e0e0;
+}
+
+/* بخش‌های اصلی */
+.content {
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h2 {
+    color: #1e3799;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    border-right: 5px solid #4a69bd;
+}
+
+/* لیست‌ها */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #f8f9fa;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-right: 4px solid #4a69bd;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: translateX(-5px);
+    background-color: #e9ecef;
+}
+
+/* دکمه‌های لینک */
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.link-button {
+    display: block;
+    background: linear-gradient(90deg, #0c2461 0%, #1e3799 100%);
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.link-button:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.link-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #1e3799 0%, #0c2461 100%);
+}
+
+.link-number {
+    background: white;
+    color: #1e3799;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* بخش حامیان */
+.sponsors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.sponsor-item {
+    background: #f1f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #1e3799;
+    border: 1px solid #d6e4ff;
+    transition: all 0.3s;
+}
+
+.sponsor-item:hover {
+    background: #e3f2fd;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* فوتر */
+footer {
+    background: #0c2461;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-contact {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* رسپانسیو برای موبایل */
+@media (max-width: 768px) {
+    .university-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-container {
+        margin-bottom: 20px;
+        width: 130px;
+        height: 130px;
+    }
+    
+    .logo-placeholder i {
+        font-size: 35px;
+    }
+    
+    .link-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sponsors {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 26px;
+    }
+    
+    .section h2 {
+        font-size: 22px;
+    }
+    
+    .university-name {
+        font-size: 20px;
+    }
+    
+    .association-name {
+        font-size: 16px;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+    
+    header {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        border-radius: 10px;
+    }
+    
+    .logo-container {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .logo-placeholder i {
+        font-size: 30px;
+    }
+    
+    .logo-placeholder span {
+        font-size: 12px;
+    }
+    
+    header h1 {
+        font-size: 22px;
+    }
+    
+    header p {
+        font-size: 16px;
+    }
+    
+    .university-name {
+        font-size: 18px;
+    }
+    
+    .association-name {
+        font-size: 14px;
+    }
+}
